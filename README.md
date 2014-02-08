@@ -34,6 +34,7 @@ buttonName can be any of the following:
 eventType is either UP or DOWN.
 
 There are some special values for buttonName and eventType:
+
 	* buttonName = MODE, eventType = SET - this event indicates that the user has changed the controller's mode.  Inspect iMpulse.state to see what changed.
 	* buttonName = ANY, eventType = ANY - indicates that the developer wants to be alerted of ALL events
 	
