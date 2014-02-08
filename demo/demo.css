@@ -54,6 +54,8 @@ body {
 .dpad {
 	left: 25px;
 	-webkit-perspective: 4000px;
+	-moz-perspective: 4000px;
+	perspective: 4000px;
 }
 .dpadZone {
 	background-image: url('rocker.png');
@@ -64,27 +66,43 @@ body {
 }
 .pressedUP .dpadZone {
 	-webkit-transform:  rotateX(60deg) scaleY(2);
+	-moz-transform:  rotateX(60deg) scaleY(2);
+	transform:  rotateX(60deg) scaleY(2);
 }
 .pressedDOWN .dpadZone {
 	-webkit-transform: rotateX(-60deg) scaleY(2);
+	-moz-transform: rotateX(-60deg) scaleY(2);
+	transform: rotateX(-60deg) scaleY(2);
 }
 .pressedLEFT .dpadZone {
 	-webkit-transform: rotateY(-60deg) scaleX(2);
+	-moz-transform: rotateY(-60deg) scaleX(2);
+	transform: rotateY(-60deg) scaleX(2);
 }
 .pressedRIGHT .dpadZone {
 	-webkit-transform: rotateY(60deg) scaleX(2);
+	-moz-transform: rotateY(60deg) scaleX(2);
+	transform: rotateY(60deg) scaleX(2);
 }
 .pressedUP.pressedLEFT .dpadZone {
 	-webkit-transform: rotate(-45deg) rotateX(60deg) scaleY(2) rotate(45deg);
+	-moz-transform: rotate(-45deg) rotateX(60deg) scaleY(2) rotate(45deg);
+	transform: rotate(-45deg) rotateX(60deg) scaleY(2) rotate(45deg);
 }
 .pressedUP.pressedRIGHT .dpadZone {
 	-webkit-transform: rotate(45deg) rotateX(60deg) scaleY(2) rotate(-45deg);
+	-moz-transform: rotate(45deg) rotateX(60deg) scaleY(2) rotate(-45deg);
+	transform: rotate(45deg) rotateX(60deg) scaleY(2) rotate(-45deg);
 }
 .pressedDOWN.pressedLEFT .dpadZone {
 	-webkit-transform: rotate(-45deg) rotateY(-60deg) scaleX(2) rotate(45deg);
+	-moz-transform: rotate(-45deg) rotateY(-60deg) scaleX(2) rotate(45deg);
+	transform: rotate(-45deg) rotateY(-60deg) scaleX(2) rotate(45deg);
 }
 .pressedDOWN.pressedRIGHT .dpadZone {
 	-webkit-transform: rotate(45deg) rotateY(60deg) scaleX(2) rotate(-45deg);
+	-moz-transform: rotate(45deg) rotateY(60deg) scaleX(2) rotate(-45deg);
+	transform: rotate(45deg) rotateY(60deg) scaleX(2) rotate(-45deg);
 }
 .bpad {
 	width: 240px;
@@ -109,6 +127,8 @@ body {
 }
 .shoulders {
 	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	perspective: 600px;
 	bottom: -40px;
 	position: relative;
 }
@@ -128,6 +148,8 @@ body {
 }
 .btnN {
 	-webkit-transform: rotateY(60deg);
+	-moz-transform: rotateY(60deg);
+	transform: rotateY(60deg);
 	top: -36px;
 	left: 128px;
 }
@@ -136,6 +158,8 @@ body {
 }
 .btnU {
 	-webkit-transform:  rotateY(-60deg) scaleX(-1);
+	-moz-transform:  rotateY(-60deg) scaleX(-1);
+	transform:  rotateY(-60deg) scaleX(-1);
 	top: -36px;
 	right: 128px;
 }
