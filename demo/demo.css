@@ -7,7 +7,7 @@ body {
 	border: 18px outset #666;
 	border-radius: 64px;
 	margin: 0 auto;
-	box-sizing: border-box;
+	-moz-box-sizing: border-box; box-sizing: border-box;
 }
 .controller-group {
 	position: relative;
@@ -48,7 +48,7 @@ body {
 	border: 25px inset #666;
 	border-radius: 240px;
 	position: absolute;
-	box-sizing: border-box;
+	-moz-box-sizing: border-box; box-sizing: border-box;
 	top: 28px;				
 }
 .dpad {
@@ -110,7 +110,7 @@ body {
 	border: 25px inset #666;
 	border-radius: 240px;
 	position: absolute;
-	box-sizing: border-box;
+	-moz-box-sizing: border-box; box-sizing: border-box;
 	top: 28px;
 	right: 25px;
 }
@@ -140,7 +140,7 @@ body {
 	position: absolute;
 	line-height: 72px;
 	border-radius: 6px;
-	box-sizing: border-box;
+	-moz-box-sizing: border-box; box-sizing: border-box;
 }
 .shoulders .pressed {
 	border: 4px inset #444;
