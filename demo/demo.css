@@ -5,6 +5,10 @@ body {
 	background-color: #444;
 	height: 300px;
 	border: 18px outset #666;
+	border-width: 18px;
+	border-style: solid;
+	border-color: #666 #222 #222 #666;
+	
 	border-radius: 64px;
 	margin: 0 auto;
 	-moz-box-sizing: border-box; box-sizing: border-box;
