@@ -3,6 +3,8 @@ iMpulseJS
 
 This is a small library to translate keyboard events from an iMpulse controller into something that would be usable by an HTML5 game.
 
+[See a demo](http://fordi.github.io/impulse-js/demo/)
+
 Usage:
 
 	iMpulse.on(buttonName, eventType, [context], callback);
