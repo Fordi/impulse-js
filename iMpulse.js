@@ -91,51 +91,49 @@ outerLoop:
 			'd16d52d54d50d220u16u52u54u50u220' : ['MODE', 'SET', 'IOS'],
 			'd16d56d54d50d220u16u56u54u50u220' : ['MODE', 'SET', 'TV'],
 			// Media mode buttons
-			'd179u179'	: ['PLAY',		'PRESS'		, 'MEDIA'		],
-			'd173u173'	: ['MUTE',		'PRESS'		, 'MEDIA'		],
-			'd177'		: ['REV',		'DOWN'		, 'MEDIA'		],
-			'u177'		: ['REV',		'UP'		, 'MEDIA'		],
-			'd176'		: ['FWD',		'DOWN'		, 'MEDIA'		],
-			'u176'		: ['FWD',		'UP'		, 'MEDIA'		],
-			'd16d37'	: ['SCROLL<',	'DOWN'		, 'MEDIA'		],
-			'u16u37'	: ['SCROLL<',	'UP'		, 'MEDIA'		],
-			'd16d39'	: ['SCROLL>',	'DOWN'		, 'MEDIA'		],
-			'u16u39'	: ['SCROLL>',	'UP'		, 'MEDIA'		],
-			// Universal mode buttons
-			'd38'		: ['UP',		'DOWN'		, 'UNIVERSAL'	],
-			'u38'		: ['UP',		'UP'		, 'UNIVERSAL'	],
-			'd37'		: ['LEFT',		'DOWN'		, 'UNIVERSAL'	],
-			'u37'		: ['LEFT',		'UP'		, 'UNIVERSAL'	],
-			'd39'		: ['RIGHT',		'DOWN'		, 'UNIVERSAL'	],
-			'u39'		: ['RIGHT',		'UP'		, 'UNIVERSAL'	],
-			'd40'		: ['DOWN',		'DOWN'		, 'UNIVERSAL'	],
-			'u40'		: ['DOWN',		'UP'		, 'UNIVERSAL'	],
-			'd65'		: ['A',			'DOWN'		, 'UNIVERSAL'	],
-			'u65'		: ['A',			'UP'		, 'UNIVERSAL'	],
-			'd87'		: ['W',			'DOWN'		, 'UNIVERSAL'	],
-			'u87'		: ['W',			'UP'		, 'UNIVERSAL'	],
-			'd86'		: ['V',			'DOWN'		, 'UNIVERSAL'	],
-			'u86'		: ['V',			'UP'		, 'UNIVERSAL'	],
-			'd77'		: ['M',			'DOWN'		, 'UNIVERSAL'	],
-			'u77'		: ['M',			'UP'		, 'UNIVERSAL'	],
-			'd78'		: ['N',			'DOWN'		, 'UNIVERSAL'	],
-			'u78'		: ['N',			'UP'		, 'UNIVERSAL'	],
-			'd85'		: ['U',			'DOWN'		, 'UNIVERSAL'	],
-			'u85'		: ['U',			'UP'		, 'UNIVERSAL'	],
+			'd177'		: ['REV',		'DOWN'],
+			'u177'		: ['REV',		'UP'],
+			'd176'		: ['FWD',		'DOWN'],
+			'u176'		: ['FWD',		'UP'],
+			'd16d37'	: ['SCROLL<',	'DOWN'],
+			'u16u37'	: ['SCROLL<',	'UP'],
+			'd16d39'	: ['SCROLL>',	'DOWN'],
+			'u16u39'	: ['SCROLL>',	'UP'],
+			// Universal mode buttons.  Do not imply a mode, since we don't get paw information.
+			'd38'		: ['UP',		'DOWN'],
+			'u38'		: ['UP',		'UP'	],
+			'd37'		: ['LEFT',		'DOWN'],
+			'u37'		: ['LEFT',		'UP'	],
+			'd39'		: ['RIGHT',		'DOWN'],
+			'u39'		: ['RIGHT',		'UP'	],
+			'd40'		: ['DOWN',		'DOWN'],
+			'u40'		: ['DOWN',		'UP'	],
+			'd65'		: ['A',			'DOWN'],
+			'u65'		: ['A',			'UP'	],
+			'd87'		: ['W',			'DOWN'],
+			'u87'		: ['W',			'UP'	],
+			'd86'		: ['V',			'DOWN'],
+			'u86'		: ['V',			'UP'	],
+			'd77'		: ['M',			'DOWN'],
+			'u77'		: ['M',			'UP'	],
+			'd78'		: ['N',			'DOWN'],
+			'u78'		: ['N',			'UP'	],
+			'd85'		: ['U',			'DOWN'],
+			'u85'		: ['U',			'UP'	],
 			// TV Mode
-			'd179'		: ['PLAY',		'DOWN'		, null			],
-			'u179'		: ['PLAY',		'UP'		, null			],
-			'd27'		: ['ESC',		'DOWN'		, 'TV'			],
-			'u27'		: ['ESC',		'UP'		, 'TV'			],
-			'd13'		: ['ENTER',		'DOWN'		, 'TV'			],
-			'u13'		: ['ENTER',		'UP'		, 'TV'			],
-			'd173'		: ['MUTE',		'DOWN'		, null			],
-			'u173'		: ['MUTE',		'UP'		, null			],
-			//Volume controls shared between TV and Media modes
-			'd175'		: ['VOL+',		'DOWN'		, null			],
-			'u175'		: ['VOL+',		'UP'		, null			],
-			'd174'		: ['VOL-',		'DOWN'		, null			],
-			'u174'		: ['VOL-',		'UP'		, null			]
+			'd27'		: ['ESC',		'DOWN'],
+			'u27'		: ['ESC',		'UP'	],
+			'd13'		: ['ENTER',		'DOWN'],
+			'u13'		: ['ENTER',		'UP'	],
+			//Controls shared between TV and Media modes
+			'd179'		: ['PLAY',		'DOWN'],
+			'u179'		: ['PLAY',		'UP'	],
+			'd173'		: ['MUTE',		'DOWN'],
+			'u173'		: ['MUTE',		'UP'	],
+			'd175'		: ['VOL+',		'DOWN'],
+			'u175'		: ['VOL+',		'UP'	],
+			'd174'		: ['VOL-',		'DOWN'],
+			'u174'		: ['VOL-',		'UP'	]
 		};
 	}());
 	impulse.state = {
@@ -170,17 +168,18 @@ outerLoop:
 			}
 		}
 	}
-	impulse.trigger = function (key, type) {
+	impulse.trigger = function (key, type, timestamp) {
 		var cbid, call,
 			id = key.toLowerCase() + ':' + type.toLowerCase();
-		if (false === triggerInternal(id, key, type)) { return; }
-		if (false === triggerInternal('any:' + type, key, type)) { return; }
-		if (false === triggerInternal('any:any', key, type)) { return; }
+		timestamp = timestamp || +new Date();
+		if (false === triggerInternal(id, key, type, timestamp)) { return; }
+		if (false === triggerInternal('any:' + type, key, type, timestamp)) { return; }
+		if (false === triggerInternal('any:any', key, type, timestamp)) { return; }
 	};
 	stream = new Stream();
 	function poll() {
 		if (!stream.length && impulse.pollingHandle) {
-			clearTimeout(impulse.pollingHandle);
+			clearInterval(impulse.pollingHandle);
 			impulse.pollingHandle = null;
 			return;
 		}
@@ -209,12 +208,14 @@ outerLoop:
 			if (events[i].event === "DOWN") {
 				impulse.state[events[i].key] = true;
 			}
-			impulse.trigger(events[i].key, events[i].event);
+			impulse.trigger(events[i].key, events[i].event, +new Date());
 		}
 	}
 	function handleKeyEvents(event) {
 		stream.addEvent(event);
-		impulse.pollingHandle = setTimeout(poll, 33);
+		if (!impulse.pollingHandle) {
+			impulse.pollingHandle = setInterval(poll, 33);
+		}
 	}
 	impulse.start = function () {
 		window.jQuery(window).on('keyup keydown', handleKeyEvents);

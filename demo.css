@@ -1,0 +1,164 @@
+body {
+	background-color: #246;
+}
+.controller {
+	background-color: #444;
+	height: 300px;
+	border: 18px outset #666;
+	border-radius: 64px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.controller-group {
+	position: relative;
+	width: 640px;
+	height: 300px;
+	margin: 120px auto 0;
+	font: 32pt Arial, sans-serif;
+	text-shadow: 1px 1px 2px #888;
+	text-align: center;
+	color: #222;
+}
+.swap {
+	display: none;
+}
+.setup {
+	display: block;
+	color: white;
+	font: 16pt Arial, sans-serif;
+	text-align: center;
+}
+.UNIVERSAL .swap {
+	display: block;
+}
+.UNIVERSAL .setup {
+	display: none;
+}
+.LEFT .dpad {
+	left: auto;
+	right: 25px;
+}
+.LEFT .bpad {
+	right: auto;
+	left: 25px;
+}
+.dpad, .bpad {
+	width: 240px;
+	height: 240px;
+	border: 25px inset #666;
+	border-radius: 240px;
+	position: absolute;
+	box-sizing: border-box;
+	top: 28px;				
+}
+.dpad {
+	left: 25px;
+	-webkit-perspective: 4000px;
+}
+.dpadZone {
+	background-image: url('rocker.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	width: 190px;
+	height: 190px;
+}
+.pressedUP .dpadZone {
+	-webkit-transform:  rotateX(60deg) scaleY(2);
+}
+.pressedDOWN .dpadZone {
+	-webkit-transform: rotateX(-60deg) scaleY(2);
+}
+.pressedLEFT .dpadZone {
+	-webkit-transform: rotateY(-60deg) scaleX(2);
+}
+.pressedRIGHT .dpadZone {
+	-webkit-transform: rotateY(60deg) scaleX(2);
+}
+.pressedUP.pressedLEFT .dpadZone {
+	-webkit-transform: rotate(-45deg) rotateX(60deg) scaleY(2) rotate(45deg);
+}
+.pressedUP.pressedRIGHT .dpadZone {
+	-webkit-transform: rotate(45deg) rotateX(60deg) scaleY(2) rotate(-45deg);
+}
+.pressedDOWN.pressedLEFT .dpadZone {
+	-webkit-transform: rotate(-45deg) rotateY(-60deg) scaleX(2) rotate(45deg);
+}
+.pressedDOWN.pressedRIGHT .dpadZone {
+	-webkit-transform: rotate(45deg) rotateY(60deg) scaleX(2) rotate(-45deg);
+}
+.bpad {
+	width: 240px;
+	height: 240px;
+	border: 25px inset #666;
+	border-radius: 240px;
+	position: absolute;
+	box-sizing: border-box;
+	top: 28px;
+	right: 25px;
+}
+.bpad div {
+	width: 72px;
+	height: 72px;
+	background: #ccc;
+	line-height: 72px;
+	border-radius: 72px;
+	box-shadow: inset 18px 18px 18px -9px #EEE,
+				inset -18px -18px 18px -9px #888;
+	color: #888;
+	position: absolute;
+}
+.shoulders {
+	-webkit-perspective: 600px;
+	bottom: -40px;
+	position: relative;
+}
+.shoulders div {
+	background-color: #222;
+	border: 4px outset #444;
+	width: 96px;
+	height: 72px;
+	position: absolute;
+	line-height: 72px;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+.shoulders .pressed {
+	border: 4px inset #444;
+	line-height: 64px;				
+}
+.btnN {
+	-webkit-transform: rotateY(60deg);
+	top: -36px;
+	left: 128px;
+}
+.btnN.pressed {
+	padding-right: 12px;
+}
+.btnU {
+	-webkit-transform:  rotateY(-60deg) scaleX(-1);
+	top: -36px;
+	right: 128px;
+}
+.btnU.pressed {
+	padding-right: 12px;
+}
+.bpad .pressed {
+	box-shadow: inset -18px -18px 18px -9px #EEE,
+				inset 18px 18px 18px -9px #888;
+}
+.btnA {
+	top: 60px;
+	left: 0px;
+}
+.btnW {
+	bottom: 0px;
+	left: 60px;
+}
+.btnV {
+	top: 60px;
+	right: 0px;
+}
+.btnM {
+	top: 0px;
+	left: 60px;
+}
