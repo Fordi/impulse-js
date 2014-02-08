@@ -68,3 +68,4 @@ callback is a function with three arguments: buttonName, eventType, and timestam
     * VOL+
     * VOL-
 	
+NOTE: IOS buttons are not supported; they overlap incompatibly with universal buttons, and are harder to parse.  Since it would be redundant, I elected to skip them for now.
