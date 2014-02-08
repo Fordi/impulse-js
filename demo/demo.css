@@ -45,7 +45,11 @@ body {
 .dpad, .bpad {
 	width: 240px;
 	height: 240px;
-	border: 25px inset #666;
+	box-shadow: inset 12.5px 12.5px 12.5px 0 #222, inset -12.5px -12.5px 12.5px 0 #666;
+	border-width: 12.5px;
+	border-style: solid;
+	border-color: transparent;
+	border-color: #222 #666 #666 #222;
 	border-radius: 240px;
 	position: absolute;
 	-moz-box-sizing: border-box; box-sizing: border-box;
@@ -61,8 +65,8 @@ body {
 	background-image: url('rocker.png');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	width: 190px;
-	height: 190px;
+	width: 215px;
+	height: 215px;
 }
 .pressedUP .dpadZone {
 	-webkit-transform:  rotateX(60deg) scaleY(2);
@@ -105,12 +109,6 @@ body {
 	transform: rotate(45deg) rotateY(60deg) scaleX(2) rotate(-45deg);
 }
 .bpad {
-	width: 240px;
-	height: 240px;
-	border: 25px inset #666;
-	border-radius: 240px;
-	position: absolute;
-	-moz-box-sizing: border-box; box-sizing: border-box;
 	top: 28px;
 	right: 25px;
 }
@@ -134,7 +132,10 @@ body {
 }
 .shoulders div {
 	background-color: #222;
-	border: 4px outset #444;
+	border-width: 4px;
+	border-style: solid;
+	border-color: #333 #111 #111 #333;
+	
 	width: 96px;
 	height: 72px;
 	position: absolute;
@@ -143,7 +144,7 @@ body {
 	-moz-box-sizing: border-box; box-sizing: border-box;
 }
 .shoulders .pressed {
-	border: 4px inset #444;
+	border-color: #111 #333 #333 #111;
 	line-height: 64px;				
 }
 .btnN {
@@ -171,18 +172,18 @@ body {
 				inset 18px 18px 18px -9px #888;
 }
 .btnA {
-	top: 60px;
-	left: 0px;
+	top: 72.5px;
+	left: 12.5px;
 }
 .btnW {
-	bottom: 0px;
-	left: 60px;
+	bottom: 12.5px;
+	left: 72.5px;
 }
 .btnV {
-	top: 60px;
-	right: 0px;
+	top: 72.5px;
+	right: 12.5px;
 }
 .btnM {
-	top: 0px;
-	left: 60px;
+	top: 12.5px;
+	left: 72.5px;
 }
