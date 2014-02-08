@@ -5,68 +5,68 @@ This is a small library to translate keyboard events from an iMpulse controller 
 
 Usage:
 
-	iMpulse.on(buttonName, eventType, [context], callback)
-	iMpulse.off(buttonName, eventType, callback)
+	iMpulse.on(buttonName, eventType, [context], callback);
+	iMpulse.off(buttonName, eventType, callback);
 
 buttonName can be any of the following:
 
-    * REV
-    * FWD
-    * SCROLL<
-    * SCROLL>
-    * UP
-    * LEFT
-    * RIGHT
-    * DOWN
-    * A
-    * W
-    * V
-    * M
-    * N
-    * U
-    * PLAY
-    * ESC
-    * ENTER
-    * MUTE
-    * VOL+
-    * VOL-
+* REV
+* FWD
+* SCROLL<
+* SCROLL>
+* UP
+* LEFT
+* RIGHT
+* DOWN
+* A
+* W
+* V
+* M
+* N
+* U
+* PLAY
+* ESC
+* ENTER
+* MUTE
+* VOL+
+* VOL-
 
 eventType is either UP or DOWN.
 
 There are some special values for buttonName and eventType:
 
-	* buttonName = MODE, eventType = SET - this event indicates that the user has changed the controller's mode.  Inspect iMpulse.state to see what changed.
-	* buttonName = ANY, eventType = ANY - indicates that the developer wants to be alerted of ALL events
+* buttonName = MODE, eventType = SET - this event indicates that the user has changed the controller's mode.  Inspect iMpulse.state to see what changed.
+* buttonName = ANY, eventType = ANY - indicates that the developer wants to be alerted of ALL events
 	
 callback is a function with three arguments: buttonName, eventType, and timestamp
 
 ### iMpulse.state:
 
-    * mode
-		* one of UNIVERSAL, MEDIA, IOS, or TV
-	* handedness
-		* LEFT or RIGHT
-	* player
-		* P1 or P2
-	* REV
-    * FWD
-    * SCROLL<
-    * SCROLL>
-    * UP
-    * LEFT
-    * RIGHT
-    * DOWN
-    * A
-    * W
-    * V
-    * M
-    * N
-    * U
-    * PLAY
-    * ESC
-    * ENTER
-    * MUTE
-    * VOL+
-    * VOL-
+* mode
+	* one of UNIVERSAL, MEDIA, IOS, or TV
+* handedness
+	* LEFT or RIGHT
+* player
+	* P1 or P2
+* REV
+* FWD
+* SCROLL<
+* SCROLL>
+* UP
+* LEFT
+* RIGHT
+* DOWN
+* A
+* W
+* V
+* M
+* N
+* U
+* PLAY
+* ESC
+* ENTER
+* MUTE
+* VOL+
+* VOL-
 	
 NOTE: IOS buttons are not supported; they overlap incompatibly with universal buttons, and are harder to parse.  Since it would be redundant, I elected to skip them for now.
