@@ -4,14 +4,7 @@ var iMpulse = (function () {
 	if (!window.jQuery) {
 		throw new Error("iMpulseJS requires jQuery 1.9 or greater");
 	}
-	var state = {
-			mode: null
-		},
-		iMpulse = {
-			state: state,
-			handedness: 'RIGHT',
-			player: 'P1'
-		},
+	var iMpulse = {},
 		events = {},
 		stream = null;
 	iMpulse.state = {

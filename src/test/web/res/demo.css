@@ -128,12 +128,14 @@ body {
 }
 .btnW, .btnV {
 	box-shadow: inset 18px 18px 18px -9px #EEE,
-				inset -18px -18px 18px -9px #888;
+				inset -18px -18px 18px -9px #888,
+				1.25px 1.25px 5px 5px #222;
 	text-shadow: -1px -1px 2px #888;
 }
 .btnA, .btnM {
 	box-shadow: inset 18px 18px 18px -9px #888,
-				inset -18px -18px 18px -9px #EEE;
+				inset -18px -18px 18px -9px #EEE,
+				-1.25px -1.25px 5px 5px #222;
 	
 }
 
@@ -185,11 +187,13 @@ body {
 }
 .btnW.pressed, .btnV.pressed {
 	box-shadow: inset -18px -18px 18px -9px #EEE,
-				inset 18px 18px 18px -9px #888;
+				inset 18px 18px 18px -9px #888,
+				1.25px 1.25px 5px 2.5px #222;
 }
 .btnM.pressed, .btnA.pressed {
 	box-shadow: inset -18px -18px 18px -9px #888,
-				inset 18px 18px 18px -9px #EEE;
+				inset 18px 18px 18px -9px #EEE,
+				-1.25px -1.25px 5px 2.5px #222;
 }
 .btnA {
 	top: 72.5px;
