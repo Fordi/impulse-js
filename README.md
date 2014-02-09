@@ -72,3 +72,24 @@ callback is a function with three arguments: buttonName, eventType, and timestam
 * VOL-
 	
 NOTE: IOS buttons are not supported; they overlap incompatibly with universal buttons, and are harder to parse.  Since it would be redundant, I elected to skip them for now.
+
+Building from source
+--------------------
+
+* If you've never built a grunt-based project:
+
+	1. Install [NodeJS](http://nodejs.org)
+	2. Install Grunt
+
+		npm install -g grunt-cli
+
+* First time:
+		
+	1. Change to your project's directory and pull down the needed modules
+
+		npm install grunt grunt-contrib-uglify
+		
+
+* To build:
+
+	grunt
