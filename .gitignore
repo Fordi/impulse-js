@@ -213,3 +213,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+node_modules/grunt-contrib-uglify/LICENSE-MIT
+
+#Node
+node_modules/
+
+#Grunt
+dest/

@@ -1,0 +1,9 @@
+{
+  "name": "impulse-js",
+  "description": "",
+  "version": "0.9.1",
+  "devDependencies": {
+    "grunt-contrib-uglify": "*",
+    "grunt": "~0.4.2"
+  }
+}
